@@ -1,0 +1,16 @@
+.how-to-buy-bg {
+  background-image: url(/images/how-to-bg.png);
+  background-size: 100% 100%;
+}
+.use-bg {
+  background-image: url(/images/use.png);
+  background-size: 100% 100%;
+}
+.roadmap-card-bg {
+  background-image: url(/images/rodmap-card-bg.png);
+  background-size: 100% 100%;
+}
+.roadmap-card-bg-active {
+  background-image: url(/images/active-rodmap-card-bg.png);
+  background-size: 100% 100%;
+}

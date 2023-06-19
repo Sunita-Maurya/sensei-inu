@@ -18,7 +18,7 @@ const Navbar = () => {
       </div>
       <select
         data-placeholder="Choose a Language..."
-        className="  px-5 text-black rounded-3xl  border "
+        className="bg-transparent  px-5 text-black rounded-3xl  border-2 "
       >
         <option value="EN" className="">
           English

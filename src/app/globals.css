@@ -25,7 +25,8 @@ body {
 }
 .header-bg {
   background-image: url(/images/header-bg.png);
-  background-size: 100% 100%;
+  background-size: 100%;
+  /* background-repeat: no-repeat; */
 }
 
 .odor-mean-chey-font {
@@ -38,46 +39,9 @@ body {
   font-family: nuku;
 }
 
-.buy-now-card {
-  background: #cc2824;
-  border: 1px solid #fe3736;
-  box-shadow: 5px 16px 52px rgba(0, 0, 0, 0.5);
-  border-radius: 48px;
-  max-width: 550px;
-}
-.timer-box {
-  background-color: #f61806;
-  border: 1px solid #fe3736;
-  border-radius: 27.5px;
-  padding: 10px 30px;
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-}
-.chain-btn {
-  background: #ffffff;
-  color: #4b4b4b;
-  border: 1px solid #aeaeae;
-  border-radius: 27.5px;
-  display: flex;
-  align-items: center;
-  width: 110px;
-  gap: 10px;
-  padding: 2px;
-}
-.input-box {
-  background: #e8e8e8;
-  box-shadow: inset 0px 3px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 27.5px;
-}
-.buy-now-btn {
-  background: linear-gradient(180deg, #fe3736 0%, #e52123 100%);
-  border-radius: 27.5px;
-  font-weight: 800;
-  border: 1px solid #1a1a1a;
-  box-shadow: 0px 3px 3px 2px #1a1a1a;
-}
-img {
-  display: block;
-  max-width: 100%;
+select option {
+  margin: 40px;
+  background: transparent;
+  color: black;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }

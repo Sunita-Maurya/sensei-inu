@@ -1,21 +1,21 @@
 import React from "react";
-import SocialLinks from "./SocialLinks";
-
+import SocialLinks from "../SocialLinks";
+import "./Header.css";
 const Header = () => {
   return (
-    <div className="made-tommy-font flex items-center justify-between">
+    <div className="made-tommy-font flex lg:flex-row flex-col items-center justify-between">
       <img src="/images/header-inu.png" alt="hero" className="" />
-      <div className="buy-now-card py-8">
+      <div className="buy-now-card py-6">
         <div className="flex  justify-around">
           <div className="timer-box">17 D</div>
           <div className="timer-box">03 H</div>
           <div className="timer-box">26 M</div>
           <div className="timer-box">54m</div>
         </div>
-        <h2 className="text-center text-2xl text-white font-medium my-5">
+        <h2 className="text-center text-2xl text-white font-medium my-3">
           Buy in Before price Increases
         </h2>
-        <div className="bg-white rounded-[54px] p-6">
+        <div className="bg-white rounded-[54px] p-5">
           <div className="flex justify-between items-center ">
             <button className="chain-btn border">
               <img src="/icons/eth.png" alt="eth" />
@@ -38,9 +38,8 @@ const Header = () => {
             <div>
               <div className="flex justify-between my-1 font-semibold">
                 <p className="text-[#c1c1c1]">
-                  {" "}
                   Amount in <span className="text-[#717171]">ETH </span> you pay
-                </p>{" "}
+                </p>
                 <button>Max</button>
               </div>
               <div className="input-box flex justify-between p-1 ">
@@ -55,7 +54,6 @@ const Header = () => {
             <div>
               <div className="flex justify-center my-1 text-[#c1c1c1] font-semibold">
                 <p>
-                  {" "}
                   Amount in
                   <span className="text-[#717171]"> $SAI </span>your receive
                 </p>
@@ -70,14 +68,14 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <p className=" text-center text-[#c1c1c1] font-semibold text-lg mb-5">
+          <p className=" text-center text-[#c1c1c1] font-semibold text-lg mb-3">
             0.015 ETH is reserved for gas. The actual amount used will depend on
             the network.
           </p>
           <button className="buy-now-btn  text-white py-2 w-full">
             BUY NOW
           </button>
-          <p className=" text-[#c1c1c1] text-center mt-5 font-semibold text-lg">
+          <p className=" text-[#c1c1c1] text-center mt-3 font-semibold text-lg">
             LISTING PRICE: $0.0000336
           </p>
         </div>
