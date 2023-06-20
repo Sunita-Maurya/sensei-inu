@@ -30,9 +30,20 @@ const roadmapData = [
 ];
 
 const HowToBuy = () => {
-  const [activeCard, setActiveCard] = useState(false);
+  const [num, setNum] = useState(3);
   const backSlide = () => {
-    setActiveCard(true);
+    if (num == 1) {
+      setNum(roadmapData.length);
+    } else {
+      setNum(num - 1);
+    }
+  };
+  const nextSlide = () => {
+    if (num == roadmapData.length) {
+      setNum(1);
+    } else {
+      setNum(num + 1);
+    }
   };
   return (
     <div className="how-to-buy-bg pb-8">
@@ -86,36 +97,55 @@ const HowToBuy = () => {
         </div>
       </div>
       {/* --------roadmap---------- */}
-      <h1 className="text-[90px]  nuku-nuku-font  leading-none text-center mb-8">
-        Roadmap{" "}
-      </h1>
-      <div className="flex justify-center items-center gap-5 ">
-        {roadmapData.map((items, i) => (
-          <div className="">
-            <h2 className="nuku-nuku-font text-3xl text-center py-3">
-              Q1 2023
-            </h2>
-            <div
-              className={`${
-                activeCard ? "roadmap-card-bg-active" : "roadmap-card-bg"
-              } p-8`}
-            >
-              <p className="odor-mean-chey-font text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do
-              </p>
+      <div className=" max-w-[1850px] mx-auto">
+        <h1 className="text-[90px]  nuku-nuku-font  leading-none text-center mb-8">
+          Roadmap{" "}
+        </h1>
+        <div className="flex justify-center items-center gap-10  ">
+          {roadmapData.map((items, i) => (
+            <div className=" " key={i}>
+              <div className=" flex justify-center items-center gap-4">
+                <span
+                  className={`${
+                    num == items.id ? "bg-[#EF8D30] " : "bg-white"
+                  }  block h-5 w-5  rounded-full`}
+                ></span>
+                <h2
+                  className={`${
+                    num == items.id ? "text-[#EF8D30] " : "text-white"
+                  }  nuku-nuku-font text-3xl text-center py-3`}
+                >
+                  Q{i + 1} 2023
+                </h2>
+              </div>
+              <div
+                className={`${
+                  num == items.id
+                    ? "roadmap-card-bg-active "
+                    : "roadmap-card-bg "
+                } p-8 `}
+              >
+                <p
+                  className={`${
+                    num == items.id ? "opacity-[1]" : "opacity-[.4]"
+                  } odor-mean-chey-font text-lg `}
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit, sed do
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <div className="flex items-center justify-center my-10 gap-5">
-        <button onClick={backSlide}>
-          <img src="/images/back-btn.png" alt="left" />
-        </button>
-        <button>
-          <img src="/images/next-btn.png" alt="left" />
-        </button>
+          ))}
+        </div>
+        <div className="flex items-center justify-center my-10 gap-5">
+          <button onClick={backSlide}>
+            <img src="/images/back-btn.png" alt="left" />
+          </button>
+          <button onClick={nextSlide}>
+            <img src="/images/next-btn.png" alt="next" />
+          </button>
+        </div>
       </div>
     </div>
   );

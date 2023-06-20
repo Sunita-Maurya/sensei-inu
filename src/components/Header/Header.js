@@ -3,8 +3,9 @@ import SocialLinks from "../SocialLinks";
 import "./Header.css";
 const Header = () => {
   return (
-    <div className="made-tommy-font flex lg:flex-row flex-col items-center justify-between">
+    <div className="made-tommy-font flex lg:flex-row flex-col items-center justify-between relative">
       <img src="/images/header-inu.png" alt="hero" className="" />
+      <button className="glob-btn absolute left-0 bottom-5">Whitepaper</button>
       <div className="buy-now-card py-6">
         <div className="flex  justify-around">
           <div className="timer-box">17 D</div>

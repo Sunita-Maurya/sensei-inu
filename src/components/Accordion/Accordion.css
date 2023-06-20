@@ -1,0 +1,29 @@
+.accord-main-bg {
+  background-image: url(/images/accord-main-bg.png);
+  background-size: 100% 100%;
+  /* background-repeat: no-repeat; */
+}
+
+.accord-bg {
+  background-image: url(/images/faq-bg.png);
+  background-size: 100% 100%;
+  /* background-repeat: no-repeat; */
+}
+.ques {
+  border-bottom: 1px solid rgba(235, 174, 156, 0.5);
+  padding-block: 10px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+
+  transition: grid-template-rows 0.2s ease;
+}
+.wrapper.open {
+  grid-template-rows: 1fr;
+}
+.expandable {
+  min-height: 0;
+}

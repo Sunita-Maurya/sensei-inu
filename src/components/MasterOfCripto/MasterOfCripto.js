@@ -58,6 +58,7 @@ const MasterOfCripto = () => {
               consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
               labore et Lorem ipsum dolor sit amet,
             </p>
+            <button className="glob-btn mt-10">Whitepaper</button>
           </div>
           {/* <div className="flex items-end  "> */}
           <img

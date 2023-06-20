@@ -45,3 +45,19 @@ select option {
   color: black;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
+
+.glob-btn {
+  width: 204.97px;
+  height: 66.41px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: MADE-TOMMY;
+  background: linear-gradient(180deg, #fe3736 0%, #e52123 100%);
+  border-radius: 27.5px;
+  box-shadow: 1px 5px 0px #b11a10;
+  transition: all 0.2s ease;
+}
+.glob-btn:hover {
+  box-shadow: 1px 8px 0px #b11a10;
+  scale: 1.02;
+}

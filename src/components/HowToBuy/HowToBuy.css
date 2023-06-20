@@ -14,3 +14,6 @@
   background-image: url(/images/active-rodmap-card-bg.png);
   background-size: 100% 100%;
 }
+.title-color {
+  color: red !important;
+}
