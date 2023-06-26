@@ -19,14 +19,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid green; */
 }
 body {
   color: #ffffff;
-}
-.header-bg {
-  background-image: url(/images/header-bg.png);
-  background-size: 100%;
-  /* background-repeat: no-repeat; */
 }
 
 .odor-mean-chey-font {

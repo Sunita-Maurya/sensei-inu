@@ -122,7 +122,7 @@ const HowToBuy = () => {
                 className={`${
                   num == items.id
                     ? "roadmap-card-bg-active "
-                    : "roadmap-card-bg "
+                    : "roadmap-card-bg"
                 } p-8 `}
               >
                 <p

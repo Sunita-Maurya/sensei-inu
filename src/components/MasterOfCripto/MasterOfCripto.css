@@ -9,5 +9,19 @@
 .sensei-is-bg {
   background-image: url(/images/sensei-is-bg.png);
   background-size: 100% 100%;
-  /* height: 100vh; */
+}
+
+@media screen and (max-width: 767px) {
+  .master-bg {
+    background-image: url(/images/mob-master-bg.png);
+    background-size: 100% 100%;
+  }
+  .how-tool-bg {
+    background-image: url(/images/mob-tool.png);
+    background-size: 100% 100%;
+  }
+  .sensei-is-bg {
+    background-image: url(/images/mob-sensei-is-bg.png);
+    background-size: 100% 100%;
+  }
 }

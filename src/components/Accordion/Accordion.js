@@ -42,7 +42,7 @@ const Accordion = () => {
     }
   };
   return (
-    <div className="accord-main-bg mb-56">
+    <div className="accord-main-bg py-32">
       <div className="flex justify-center items-center gap-20 container mx-auto ">
         <img src="/images/ques-inu.png" alt="ques-inu" />
         <div className="accord-bg p-20 ">
@@ -54,28 +54,24 @@ const Accordion = () => {
               <>
                 <div
                   key={i}
-                  className="ques flex justify-between items-center"
+                  className="ques odor-mean-chey-font  flex justify-between items-center"
                   onClick={() => handleclick(items.id)}
                 >
                   <p>{items.ques}</p>
                   <img
                     src="/icons/arrow.png"
                     alt="arrow"
-                    className={`${
+                    className={`transition-all duration-75 ${
                       activeAccord == items.id ? "rotate-180" : ""
                     }`}
                   />
                 </div>
                 <div
-                  className={`wrapper ${
+                  className={`wrapper odor-mean-chey-font  ${
                     activeAccord == items.id ? "wrapper open py-4" : ""
                   }`}
                 >
-                  <div className={`expandable `}>
-                    Cipher Core is an innovative blockchain project focused on
-                    enabling anonymous transactions and preserving privacy
-                    within decentralized finance.
-                  </div>
+                  <div className={`expandable `}>{items.ans}</div>
                 </div>
               </>
             );
