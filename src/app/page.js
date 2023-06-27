@@ -10,10 +10,10 @@ export default function Home() {
     <main className="">
       <Header />
       <MasterOfCripto />
-      {/* <HowToBuy />
-        <TokenAirdrop />
-        <Accordion />
-        <Footer/> */}
+      <HowToBuy />
+      <TokenAirdrop />
+      <Accordion />
+      {/* <Footer/>   */}
     </main>
   );
 }

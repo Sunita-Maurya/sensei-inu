@@ -31,11 +31,13 @@ const roadmapData = [
 
 const HowToBuy = () => {
   const [num, setNum] = useState(3);
+  const [activeCard, setActiveCard] = useState(false);
   const backSlide = () => {
     if (num == 1) {
       setNum(roadmapData.length);
     } else {
       setNum(num - 1);
+      setActiveCard(null);
     }
   };
   const nextSlide = () => {
@@ -43,21 +45,34 @@ const HowToBuy = () => {
       setNum(1);
     } else {
       setNum(num + 1);
+      setActiveCard(null);
+    }
+  };
+  const clickHandler = (value) => {
+    if (value == activeCard) {
+      setActiveCard(null);
+    } else {
+      setActiveCard(value);
+      setNum(value);
     }
   };
   return (
     <div className="how-to-buy-bg pb-8">
-      <div className="container mx-auto py-10 text-center">
-        <h1 className="text-[90px]  nuku-nuku-font  leading-none">
+      <div className="container mx-auto py-10 text-center px-5">
+        <h1 className="md:text-[90px] text-4xl  nuku-nuku-font  leading-none">
           How To Buy
         </h1>
-        <div className="flex justify-center gap-20 py-10 text-[#77351D]">
-          <div className="use-bg p-10">
+        <div className="flex justify-center md:flex-row flex-col   xl:gap-20 gap-5 py-10 text-[#77351D]">
+          <div className="use-bg xl:p-10 p-4 mx-auto">
             <div className="flex items-center justify-between">
-              <h2 className="nuku-nuku-font text-[50px]  leading-none w-1/2">
+              <h2 className="nuku-nuku-font xl:text-[50px] text-2xl  leading-none w-1/2">
                 USE ETH OR BNB
               </h2>
-              <img src="/icons/use-eth.png" alt="use-eth" />
+              <img
+                src="/icons/use-eth.png"
+                alt="use-eth"
+                className="lg:w-auto w-16"
+              />
             </div>
             <p className="text-lg text-start odor-mean-chey-font mt-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -66,12 +81,16 @@ const HowToBuy = () => {
               labore et
             </p>
           </div>
-          <div className="use-bg p-10">
+          <div className="use-bg xl:p-10 p-4 mx-auto">
             <div className="flex items-center justify-between">
-              <h2 className="nuku-nuku-font text-[50px]  leading-none w-1/2">
+              <h2 className="nuku-nuku-font xl:text-[50px] text-2xl  leading-none w-1/2">
                 USE ETH OR BNB
               </h2>
-              <img src="/icons/use-eth.png" alt="use-eth" />
+              <img
+                src="/icons/use-eth.png"
+                alt="use-eth"
+                className=" lg:w-auto w-16"
+              />
             </div>
             <p className="text-lg text-start odor-mean-chey-font mt-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -80,12 +99,16 @@ const HowToBuy = () => {
               labore et
             </p>
           </div>
-          <div className="use-bg p-10">
+          <div className="use-bg xl:p-10 p-4  mx-auto">
             <div className="flex items-center justify-between">
-              <h2 className="nuku-nuku-font text-[50px]  leading-none w-1/2">
+              <h2 className="nuku-nuku-font xl:text-[50px] text-2xl leading-none w-1/2">
                 USE ETH OR BNB
               </h2>
-              <img src="/icons/use-eth.png" alt="use-eth" />
+              <img
+                src="/icons/use-eth.png"
+                alt="use-eth"
+                className="lg:w-auto w-16"
+              />
             </div>
             <p className="text-lg text-start odor-mean-chey-font mt-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -98,13 +121,13 @@ const HowToBuy = () => {
       </div>
       {/* --------roadmap---------- */}
       <div className=" max-w-[1850px] mx-auto">
-        <h1 className="text-[90px]  nuku-nuku-font  leading-none text-center mb-8">
+        <h1 className="md:text-[90px] text-4xl nuku-nuku-font  leading-none text-center mb-8">
           Roadmap{" "}
         </h1>
-        <div className="flex justify-center items-center gap-10  ">
+        <div className="grid xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10  mx-5">
           {roadmapData.map((items, i) => (
             <div className=" " key={i}>
-              <div className=" flex justify-center items-center gap-4">
+              <div className=" flex justify-center items-center flex-wrap gap-4">
                 <span
                   className={`${
                     num == items.id ? "bg-[#EF8D30] " : "bg-white"
@@ -119,8 +142,9 @@ const HowToBuy = () => {
                 </h2>
               </div>
               <div
-                className={`${
-                  num == items.id
+                onClick={() => clickHandler(items.id)}
+                className={` ${
+                  num == items.id || activeCard == items.id
                     ? "roadmap-card-bg-active "
                     : "roadmap-card-bg"
                 } p-8 `}
@@ -138,7 +162,7 @@ const HowToBuy = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center my-10 gap-5">
+        <div className="md:flex hidden items-center justify-center my-10 gap-5">
           <button onClick={backSlide}>
             <img src="/images/back-btn.png" alt="left" />
           </button>

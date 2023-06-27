@@ -80,12 +80,11 @@ const MasterOfCripto = () => {
           <img
             src="/images/book-inu-home.png"
             alt="character"
-            className="md:hidden w-full"
+            className="md:hidden w-full pb-5"
           />
         </div>
       </div>
     </>
   );
 };
-
 export default MasterOfCripto;

@@ -3,18 +3,18 @@ import "./TokenAirdrop.css";
 const TokenAirdrop = () => {
   return (
     <div className="airdrop-bg py-20">
-      <div className="container mx-auto">
-        <h1 className="text-[80px]  nuku-nuku-font text-center">
+      <div className="container lg:mx-auto ">
+        <h1 className="md:text-[80px] text-3xl nuku-nuku-font text-center leading-normal">
           <span className="text-[#AD190E]">50 billion </span> TOKEN AIRDROP
         </h1>
-        <p className="text-lg odor-mean-chey-font py-5 text-center max-w-[50%] mx-auto">
+        <p className="text-lg odor-mean-chey-font py-5 text-center  mx-aut">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et
         </p>
-        <div className="flex justify-center gap-20 mt-20">
-          <div className="airdrop-cards p-10">
+        <div className="flex justify-center md:flex-row flex-col  lg:gap-20 gap-5 mt-20 mx-5">
+          <div className="airdrop-cards lg:p-10 p-4 ">
             <h2 className="text-[#EDA135] text-[50px]  nuku-nuku-font text-center">
               Buy in pre sale
             </h2>
@@ -23,7 +23,7 @@ const TokenAirdrop = () => {
               eiusmod tempor incididunt ut labore dolor
             </p>
           </div>
-          <div className="airdrop-cards p-10">
+          <div className="airdrop-cards lg:p-10 p-4">
             <h2 className="text-[#EDA135] text-[50px]  nuku-nuku-font text-center">
               Buy in pre sale
             </h2>
@@ -32,7 +32,7 @@ const TokenAirdrop = () => {
               eiusmod tempor incididunt ut labore dolor
             </p>
           </div>
-          <div className="airdrop-cards p-10">
+          <div className="airdrop-cards lg:p-10 p-4">
             <h2 className="text-[#EDA135] text-[50px]  nuku-nuku-font text-center">
               Buy in pre sale
             </h2>
@@ -43,11 +43,11 @@ const TokenAirdrop = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center">
+      <div className="container mx-auto flex items-center md:flex-row flex-col-reverse md:py-0 py-10">
         <img
           src="/images/airdrop-inu.png"
           alt="inu"
-          className="-translate-y-14"
+          className="md:-translate-y-14"
         />
         <button className="glob-btn ">Buy Now</button>
       </div>

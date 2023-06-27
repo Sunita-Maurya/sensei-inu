@@ -1,6 +1,7 @@
 .how-to-buy-bg {
   background-image: url(/images/how-to-bg.png);
   background-size: 100% 100%;
+  background-color: #eda135;
 }
 .use-bg {
   background-image: url(/images/use.png);
@@ -16,4 +17,11 @@
 }
 .title-color {
   color: red !important;
+}
+@media screen and (max-width: 767px) {
+  .how-to-buy-bg {
+    background-image: url(/images/mob-how-bg.png);
+    background-size: 100% 100%;
+    /* transform: translate(0, -1%); */
+  }
 }

@@ -43,17 +43,16 @@ const Accordion = () => {
   };
   return (
     <div className="accord-main-bg py-32">
-      <div className="flex justify-center items-center gap-20 container mx-auto ">
+      <div className="flex justify-center items-center md:flex-row flex-col-reverse gap-20 container mx-auto ">
         <img src="/images/ques-inu.png" alt="ques-inu" />
         <div className="accord-bg p-20 ">
-          <h1 className="text-[90px] nuku-nuku-font leading-none text-center mb-10">
+          <h1 className="md:text-[90px] text-4xl nuku-nuku-font leading-none text-center mb-10">
             Frequently Asked
           </h1>
           {faqData.map((items, i) => {
             return (
-              <>
+              <div key={i}>
                 <div
-                  key={i}
                   className="ques odor-mean-chey-font  flex justify-between items-center"
                   onClick={() => handleclick(items.id)}
                 >
@@ -73,7 +72,7 @@ const Accordion = () => {
                 >
                   <div className={`expandable `}>{items.ans}</div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

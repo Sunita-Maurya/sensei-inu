@@ -24,8 +24,8 @@ const Footer = () => {
         </div>
         <div className="flex justify-end items-end flex-col">
           <div className="flex gap-5">
-            <img src="/icons/discord.png"  alt="discord" />
-            <img src="/icons/twitter.png"  alt="twitter" />
+            <img src="/icons/discord.png" alt="discord" />
+            <img src="/icons/twitter.png" alt="twitter" />
             <img src="/icons/telegram.png" alt="telegram" />
           </div>
           <p className="text-right odor-mean-chey-font text-[14px] opacity-[0.5] mt-5">
