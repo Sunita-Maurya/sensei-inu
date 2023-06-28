@@ -42,10 +42,20 @@ const Accordion = () => {
     }
   };
   return (
-    <div className="accord-main-bg py-32">
-      <div className="flex justify-center items-center md:flex-row flex-col-reverse gap-20 container mx-auto ">
-        <img src="/images/ques-inu.png" alt="ques-inu" />
-        <div className="accord-bg p-20 ">
+    <div id="faqs" className="accord-main-bg py-32">
+      <div className="flex justify-center items-center lg:flex-row flex-col-reverse xl:gap-20 gap-10 container mx-auto ">
+        <img
+          src="/images/ques-inu.png"
+          alt="ques-inu"
+          className="md:block hidden "
+        />
+        <img
+          src="/images/mob char accord.png"
+          alt="ques-inu"
+          className="md:hidden block"
+        />
+
+        <div className="accord-bg md:p-20 mx-5">
           <h1 className="md:text-[90px] text-4xl nuku-nuku-font leading-none text-center mb-10">
             Frequently Asked
           </h1>

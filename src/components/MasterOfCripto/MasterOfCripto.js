@@ -50,19 +50,19 @@ const MasterOfCripto = () => {
       <div className="sensei-is-bg">
         <div className="container mx-auto flex lg:flex-row flex-col items-center justify-center pt-32 ">
           <div>
-            <h1 className="md:text-[100px] text-4xl md:txt-start text-center nuku-nuku-font text-[#AD190E] leading-normal">
+            <h1 className="md:text-[100px] text-4xl lg:text-start text-center nuku-nuku-font text-[#AD190E] leading-normal">
               SENSEI is
             </h1>
-            <h1 className="md:text-[90px] text-4xl  md:txt-start text-center nuku-nuku-font">
+            <h1 className="md:text-[90px] text-4xl  lg:text-start text-center nuku-nuku-font">
               One Click away
             </h1>
-            <p className="text-lg py-5 odor-mean-chey-font  md:txt-start text-center md:px-0 px-5">
+            <p className="text-lg py-5 odor-mean-chey-font  lg:text-start text-center md:px-0 px-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet,
               consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
               labore et
             </p>
-            <p className="text-lg odor-mean-chey-font  md:txt-start text-center  md:px-0 px-5">
+            <p className="text-lg odor-mean-chey-font  lg:text-start text-center  md:px-0 px-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet,
               consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

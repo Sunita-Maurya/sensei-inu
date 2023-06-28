@@ -47,12 +47,12 @@ const Header = () => {
               </div>
               <div className="flex md:flex-row flex-col justify-between items-center gap-3 my-5 ">
                 <div className="md:w-auto w-full">
-                  <div className="flex justify-between my-1 font-semibold">
+                  <div className="flex justify-between my-1 font-semibold ">
                     <p className="text-[#c1c1c1]">
                       Amount in <span className="text-[#717171]">ETH </span> you
                       pay
                     </p>
-                    <button>Max</button>
+                    <button className="text-[#717171]">Max</button>
                   </div>
                   <div className="input-box  flex justify-between p-1 ">
                     <input

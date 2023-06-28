@@ -13,7 +13,7 @@ export default function Home() {
       <HowToBuy />
       <TokenAirdrop />
       <Accordion />
-      {/* <Footer/>   */}
+      <Footer />
     </main>
   );
 }

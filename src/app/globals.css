@@ -24,7 +24,12 @@
 body {
   color: #ffffff;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
 .odor-mean-chey-font {
   font-family: Odor-Mean-Chey;
 }
@@ -35,10 +40,15 @@ body {
   font-family: nuku;
 }
 
+select {
+  color: white !important;
+  outline: none;
+}
 select option {
   margin: 40px;
   background: transparent;
-  color: black;
+  color: black !important;
+
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 

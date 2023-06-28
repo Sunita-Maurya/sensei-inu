@@ -58,7 +58,7 @@ const HowToBuy = () => {
   };
   return (
     <div className="how-to-buy-bg pb-8">
-      <div className="container mx-auto py-10 text-center px-5">
+      <div id="howToBuy" className="container mx-auto py-10 text-center px-5">
         <h1 className="md:text-[90px] text-4xl  nuku-nuku-font  leading-none">
           How To Buy
         </h1>
@@ -120,7 +120,7 @@ const HowToBuy = () => {
         </div>
       </div>
       {/* --------roadmap---------- */}
-      <div className=" max-w-[1850px] mx-auto">
+      <div id="roadmap" className=" max-w-[1850px] mx-auto">
         <h1 className="md:text-[90px] text-4xl nuku-nuku-font  leading-none text-center mb-8">
           Roadmap{" "}
         </h1>
