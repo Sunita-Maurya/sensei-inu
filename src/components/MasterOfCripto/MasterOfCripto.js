@@ -40,7 +40,7 @@ const MasterOfCripto = () => {
       {/* --------how to our tool */}
       <div className="how-tool-bg">
         <div className="container mx-auto flex flex-col justify-center items-center py-10">
-          <h1 className="md:text-[90px] text-4xl  nuku-nuku-font">
+          <h1 className="md:text-[90px] text-4xl  nuku-nuku-font lg:mt-14">
             Know our tool
           </h1>
           <img src="/images/how-tool-inu.png" alt="inu" />
