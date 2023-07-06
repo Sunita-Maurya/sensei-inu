@@ -1,9 +1,11 @@
 "use client";
-import React, { useState } from "react";
-// import { Translation } from "react-i18next";
-// import ChangeLang from "../ChangeLang";
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import LanguageDropdown from "./LanguageDropdown";
+
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(false);
+  const { t } = useTranslation();
   return (
     <>
       <div className="odor-mean-chey-font lg:flex hidden justify-between items-center xl:mx-0 mx-5 ">
@@ -12,41 +14,26 @@ const Navbar = () => {
         </div>
         <div className="flex justify-center  gap-10 xl:text-lg text-sm">
           <a href="" className="transition-all hover:text-[#FE3736] ">
-            Platform
+            {t("Platform")}
           </a>
           <a href="" className="transition-all hover:text-[#FE3736] ">
-            Sensei Token
+            {t("Sensei Token")}
           </a>
           <a href="#howToBuy" className="transition-all hover:text-[#FE3736] ">
-            How to Buy
+            {t("How to Buy")}
           </a>
           <a href="#roadmap" className="transition-all hover:text-[#FE3736] ">
-            Roadmap
+            {t("Roadmap")}
           </a>
           <a href="#airdrop" className="transition-all hover:text-[#FE3736] ">
-            Airdrop
+            {t("Airdrop")}
           </a>
-          <a href="#faqs" className="transition-all hover:text-[#FE3736] ">
-            FAQs
+          <a href="#faqs" className="transition-all hover:text-[#FE3736]">
+            {t("Faq")}
           </a>
         </div>
-        {/* <Translation>{(t) => <ChangeLang t={t} />}</Translation> */}
 
-        <select
-          data-placeholder="Choose a Language..."
-          className="bg-transparent  px-5 text-black rounded-3xl  border-2 "
-        >
-          <option value="EN" className="">
-            English
-          </option>
-          <option value="ET">Estonian</option>
-          <option value="FJ">Fiji</option>
-          <option value="FI">Finnish</option>
-          <option value="FR">French</option>
-          <option value="KA">Georgian</option>
-          <option value="DE">German</option>
-          <option value="EL">Greek</option>
-        </select>
+        <LanguageDropdown />
       </div>
       {/* ------------- mobile viwe------------ */}
       <div className="lg:hidden p-5 relative ">

@@ -1,16 +1,28 @@
 .how-to-buy-bg {
   background-image: url(/images/how-to-bg.png);
   background-size: 100% 100%;
-  background-color: #eda135;
+  background-color: #432a07;
 }
 .use-bg {
   background-image: url(/images/use.png);
   background-size: 100% 100%;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.use-bg:hover {
+  scale: 1.05;
 }
 .roadmap-card-bg {
   background-image: url(/images/rodemap-card-bg.png);
   background-size: 100% 100%;
+  transition: all 0.2s ease;
 }
+.roadmap-card-bg:hover {
+  background-image: url(/images/active-rodmap-card-bg.png);
+  background-size: 100% 100%;
+  color: white;
+}
+
 .roadmap-card-bg-active {
   background-image: url(/images/active-rodmap-card-bg.png);
   background-size: 100% 100%;

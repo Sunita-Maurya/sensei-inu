@@ -6,31 +6,34 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
+        Platform: "Platform",
         Hi: "Hi",
-        Actions: "Actions"
-      }
+        Actions: "Actions",
+      },
     },
     tm: {
       translation: {
+        Platform: "மேடை",
+
         Hi: "வணக்கம்",
-        Actions: "செயல்கள்"
-      }
+        Actions: "செயல்கள்",
+      },
     },
     sp: {
       translation: {
         Hi: "Hola",
-        Actions: "Comportamiento"
-      }
+        Actions: "Comportamiento",
+      },
     },
     tl: {
       translation: {
         Hi: "హాయ్",
-        Actions: "చర్యలు"
-      }
-    }
+        Actions: "చర్యలు",
+      },
+    },
   },
   keySeparator: false,
-  interpolation: { escapeValue: false }
+  interpolation: { escapeValue: false },
 });
 
 export default i18n;

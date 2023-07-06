@@ -43,13 +43,11 @@
   /* background-color: #b5b3b3; */
   border: 2px solid #f93332;
 }
-.chain-btn .red-border {
+.red-active-btn {
   border: 2px solid #f93332;
 }
-.input-box {
-  background: #e8e8e8;
-  box-shadow: inset 0px 3px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 27.5px;
+.chain-btn .red-border {
+  border: 2px solid #f93332;
 }
 .buy-now-btn {
   background: linear-gradient(180deg, #fe3736 0%, #e52123 100%);
@@ -62,7 +60,29 @@
 .buy-now-btn:hover {
   box-shadow: 0px 3px 5px 4px #1a1a1a;
 }
-
+.custom-input input[type="number"] {
+  background: #e8e8e8;
+  box-shadow: inset 0px 3px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 27.5px;
+  -webkit-appearance: none !important;
+  -moz-appearance: textfield;
+  appearance: none !important;
+  margin: 0;
+  padding-right: 10px;
+  width: 100%;
+  padding-block: 8px;
+  background-image: url("/icons/white-eth.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  border: 1px solid black;
+}
+.custom-input::-webkit-inner-spin-button,
+.custom-input::-webkit-outer-spin-button {
+  opacity: 0;
+  border: 1px solid red;
+  height: 50px;
+  width: 80px;
+}
 @media screen and (max-width: 425px) {
   .chain-btn {
     flex-direction: column;

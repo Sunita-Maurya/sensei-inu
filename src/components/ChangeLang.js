@@ -1,27 +1,16 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import React, { useEffect, useState } from "react";
+import i18n from "./LangConfig";
 
-const ChangeLang = ({ t }) => {
-  const [lang, setLang] = useState("en");
-
-  useEffect(() => {
-    localStorage.setItem("lang", lang);
-    const storedLang = localStorage.getItem("lang");
-    i18n.changeLanguage(storedLang);
-  }, [lang]);
-
-  const handleLangChange = (e) => {
-    setLang(e.target.value);
-  };
+const ChangeLang = ({langChange}) => {
+ 
+  
 
   return (
-    <div>
+    <div className="">
       <select
-        className="selectBox"
-        onChange={handleLangChange}
-        name="lang"
+        data-placeholder="Choose a Language..."
+        className=" selectBox bg-transparent  px-5 text-black rounded-3xl  border-2 "
+        onChange={langChange}
         value={lang}
       >
         <option className="optionsMenu" value="en">
@@ -37,8 +26,9 @@ const ChangeLang = ({ t }) => {
           Spanish(española)
         </option>
       </select>
-      <p className="textToChange">{t("Hi")}</p>
-      <p className="textToChange">{t("Actions")}</p>
+      <p className="textToChange text-black">{i18n.t("Hi")}</p>
+      <p className="textToChange text-black">{i18n.t("Actions")}</p>
+      <p className="textToChange text-black">{i18n.t("hello")}</p>
     </div>
   );
 };

@@ -1,17 +1,20 @@
 "use client";
 import React from "react";
 import "./MasterOfCripto.css";
+import { useTranslation } from "react-i18next";
+
 const MasterOfCripto = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="master-bg">
         <div className="container mx-auto text-center py-20 px-5">
           <h1 className="md:text-[100px] text-4xl text-[#F0C8B4]  nuku-nuku-font leading-normal">
-            Master of
+            {t("Master of")}
           </h1>
 
           <h1 className="md:text-[100px] text-4xl nuku-nuku-font">
-            CRYPTO Trivia
+            {t("CRYPTO Trivia")}
           </h1>
           <div className="lg:max-w-[50%] text-lg odor-mean-chey-font py-10 mx-auto">
             <p>

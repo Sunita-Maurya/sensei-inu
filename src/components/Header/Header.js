@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+
 import SocialLinks from "../SocialLinks";
 
 import "./Header.css";
 import Navbar from "../Navbar/Navbar";
-const Header = () => {
+const Header = ({ lang, handleLanguageChange }) => {
+  const [active, setActive] = useState(false);
+  const btnHandler = (num) => {
+    setActive(num);
+  };
   return (
     <div className=" header-bg">
       <div className="container mx-auto">
-        <Navbar />
+        <Navbar lang={lang} />
 
         <div className=" made-tommy-font flex lg:flex-row flex-col items-center justify-between relative py-5">
           <div className="lg:block hidden">
@@ -28,19 +33,39 @@ const Header = () => {
             </h2>
             <div className="bg-white rounded-[54px] p-5">
               <div className="flex justify-between items-center ">
-                <button className="chain-btn border">
+                <button
+                  onClick={() => btnHandler(1)}
+                  className={`chain-btn border ${
+                    active == 1 ? "red-active-btn" : ""
+                  }`}
+                >
                   <img src="/icons/eth.png" alt="eth" />
                   <span>ETH</span>
                 </button>
-                <button className="chain-btn">
+                <button
+                  onClick={() => btnHandler(2)}
+                  className={`chain-btn border ${
+                    active == 2 ? "red-active-btn" : ""
+                  }`}
+                >
                   <img src="/icons/usdt.png" alt="eth" />
                   <span>USDT</span>
                 </button>
-                <button className="chain-btn">
+                <button
+                  onClick={() => btnHandler(3)}
+                  className={`chain-btn border ${
+                    active == 3 ? "red-active-btn" : ""
+                  }`}
+                >
                   <img src="/icons/bnb.png" alt="eth" />
                   <span>BNB</span>
                 </button>
-                <button className="chain-btn">
+                <button
+                  onClick={() => btnHandler(4)}
+                  className={`chain-btn border ${
+                    active == 4 ? "red-active-btn" : ""
+                  }`}
+                >
                   <img src="/icons/card.png" alt="eth" />
                   <span>Card</span>
                 </button>
@@ -54,13 +79,12 @@ const Header = () => {
                     </p>
                     <button className="text-[#717171]">Max</button>
                   </div>
-                  <div className="input-box  flex justify-between p-1 ">
+                  <div className="custom-input flex justify-between p-1 ">
                     <input
                       type="number"
                       placeholder="0"
-                      className="bg-transparent text-[#202020] font-medium placeholder:text-[#202020] w-[90%] pl-3"
+                      className="custom-input  bg-transparent text-[#202020] font-medium placeholder:text-[#202020] w-[90%] pl-3"
                     />
-                    <img src="/icons/white-eth.png" alt="white eth" />
                   </div>
                 </div>
                 <div className="md:w-auto w-full">
@@ -70,13 +94,12 @@ const Header = () => {
                       <span className="text-[#717171]"> $SAI </span>your receive
                     </p>
                   </div>
-                  <div className="input-box flex justify-between p-1">
+                  <div className="custom-input flex justify-between p-1 ">
                     <input
                       type="number"
                       placeholder="0"
-                      className="bg-transparent text-[#202020] font-medium placeholder:text-[#202020] w-[90%] pl-3"
+                      className="custom-input  bg-transparent text-[#202020] font-medium placeholder:text-[#202020] w-[90%] pl-3"
                     />
-                    <img src="/icons/white-eth.png" alt="white eth" />
                   </div>
                 </div>
               </div>
